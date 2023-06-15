@@ -1,38 +1,39 @@
 .calculator-component {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    padding: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 0;
 }
 
 .calculator-component input {
-    width: 98.8%;
-    height: 50px;
-    text-align: end;
-    background-color: #858694;
-    border-style: none;
+  width: 98.8%;
+  height: 50px;
+  text-align: end;
+  background-color: #858694;
+  border-style: none;
 }
 
 .calculator-component input::placeholder {
-    color: whitesmoke;
+  color: whitesmoke;
 }
+
 .cal-btn {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .cal-btn button {
-    height: 55px;
-    background-color: #e0e0e0;
-    border: none;
-    border: 1px solid #babac0;
+  height: 55px;
+  background-color: #e0e0e0;
+  border: none;
+  border: 1px solid #babac0;
 }
 
 .bk-org {
-    background-color: #f5913e !important;
+  background-color: #f5913e !important;
 }
 
 .btn-0 {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
