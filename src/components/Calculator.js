@@ -10,17 +10,18 @@ export default function MyCalculator() {
   };
 
   const [dataObj, setDataObj] = useState(dataObjInitial);
+  const { total, operation, next } = dataObj;
 
   const btnAction = (event) => {
     const buttonName = event.target.innerText;
-    console.log(dataObj, buttonName);
-    // calculate(dataObj, buttonName)
+    const dataObjUpdated = calculate(dataObj, buttonName);
+    console.log(dataObjUpdated);
   };
 
   return (
     <div className="calculator-component">
       <div className="calculator-sec">
-        <input type="text" name="input" id="input" placeholder={`${dataObj.next}  ${dataObj.operation}  ${dataObj.total}`} />
+        <input type="text" name="input" id="input" placeholder={`${total} ${operation} ${next}`} />
         <div className="cal-btn">
           <button onClick={btnAction} type="button">AC</button>
           <button onClick={btnAction} type="button">+/-</button>
