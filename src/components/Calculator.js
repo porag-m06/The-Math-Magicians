@@ -3,25 +3,23 @@ import './Calculator.css';
 import calculate from '../logic/calculate';
 
 export default function MyCalculator() {
-  const dataObjInitial = {
-    total: 0,
+  const [dataObj, setDataObj] = useState({
+    total: null,
     next: null,
     operation: null,
-  };
-
-  const [dataObj, setDataObj] = useState(dataObjInitial);
-  const { total, operation, next } = dataObj;
+  });
 
   const btnAction = (event) => {
     const buttonName = event.target.innerText;
-    const dataObjUpdated = calculate(dataObj, buttonName);
-    console.log(dataObjUpdated);
+    setDataObj(calculate(dataObj, buttonName));
   };
+
+  const result = dataObj.next ? dataObj.next : dataObj.total || 0;
 
   return (
     <div className="calculator-component">
       <div className="calculator-sec">
-        <input type="text" name="input" id="input" placeholder={`${total} ${operation} ${next}`} />
+        <input type="text" name="input" id="input" placeholder={result} />
         <div className="cal-btn">
           <button onClick={btnAction} type="button">AC</button>
           <button onClick={btnAction} type="button">+/-</button>
