@@ -1,20 +1,26 @@
+import React, { useState } from 'react';
 import './Calculator.css';
 import calculate from '../logic/calculate';
 
 export default function MyCalculator() {
+  const dataObjInitial = {
+    total: 0,
+    next: null,
+    operation: null,
+  };
 
-  const btnAction = (event)=>{
-    //calculate(event.target.textContent)
-    console.log(event,"\n\nThe button that is clicked is: ",event.target.textContent);
-  }
+  const [dataObj, setDataObj] = useState(dataObjInitial);
 
-
-
+  const btnAction = (event) => {
+    const buttonName = event.target.innerText;
+    console.log(dataObj, buttonName);
+    // calculate(dataObj, buttonName)
+  };
 
   return (
     <div className="calculator-component">
       <div className="calculator-sec">
-        <input type="text" name="input" id="input" placeholder="0" />
+        <input type="text" name="input" id="input" placeholder={`${dataObj.next}  ${dataObj.operation}  ${dataObj.total}`} />
         <div className="cal-btn">
           <button onClick={btnAction} type="button">AC</button>
           <button onClick={btnAction} type="button">+/-</button>
