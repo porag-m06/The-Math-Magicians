@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import '../style/Quote.css';
 
 export default function Quote() {
   const [quote, setQuote] = useState('loading...');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Calculator.css';
+import '../style/Calculator.css';
 import calculate from '../logic/calculate';
 
 export default function MyCalculator() {
@@ -18,6 +18,7 @@ export default function MyCalculator() {
 
   return (
     <div className="calculator-component">
+      <h2>{'Let\'s do some math!'}</h2>
       <div className="calculator-sec">
         <input type="text" name="input" id="input" placeholder={result} />
         <div className="cal-btn">

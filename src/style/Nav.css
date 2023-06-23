@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+}
+
+.nav p {
+  font-size: 40px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 25px;
+  list-style-type: none;
+}
+
+.nav li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(0, 162, 255);
+}
