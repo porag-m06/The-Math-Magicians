@@ -1,12 +1,20 @@
 .calculator-component {
   display: flex;
   flex-direction: column;
-  width: 350px;
   padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.calculator-sec {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  right: 0;
 }
 
 .calculator-component input {
-  width: 98.8%;
+  width: 99.5%;
   height: 50px;
   text-align: end;
   background-color: #858694;
