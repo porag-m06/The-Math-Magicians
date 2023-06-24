@@ -121,7 +121,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 > Please follow the link for a live demo.
-- [The Math Magicians: (Will be deployed soon...)](https://github.com/porag-m06/The-Math-Magicians/dist/)
+- [The Math Magicians](https://math-magic-calculator.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
